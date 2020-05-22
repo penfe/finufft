@@ -16,6 +16,18 @@ extern "C" {
   #include "../contrib/legendre_rule_fast.h"
 #endif
 
+void finufft_make_thread_safe(bool enable)
+{
+    if (enable)
+    {
+        FFTW_MAKE_PLANNER_THREAD_SAFE();
+    }
+    else
+    {
+        // TODO:
+    }
+}
+
 void finufft_default_opts(nufft_opts *o)
 // Sets default nufft opts. See finufft.h for definition of opts.
 // This was created to avoid uncertainty about C++11 style static initialization

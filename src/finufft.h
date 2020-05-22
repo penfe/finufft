@@ -58,6 +58,7 @@ typedef struct {      // Note: defaults in common/finufft_default_opts()
 extern "C"
 {
 #endif
+void finufft_make_thread_safe(bool enable);
 void finufft_default_opts(nufft_opts *o);
 int finufft1d1(BIGINT nj,FLT* xj,CPX* cj,int iflag,FLT eps,BIGINT ms,
 	       CPX* fk, nufft_opts opts);
